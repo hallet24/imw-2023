@@ -1,0 +1,102 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    margin: 0;
+    padding: 0;
+}
+
+.sky {
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+}
+
+.ground {
+    background-color: green;
+    width: 100%;
+    height: 100%;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 50%;
+    z-index: 4  ;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+}
+
+.s1 {
+    width: 99%;
+    height: 99%;
+    background-color: yellow;
+    border-radius: 100% 0 0 0;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.s2 {
+    width: 99%;
+    height: 99%;
+    background-color: yellow;
+    border-radius: 0 100% 0 0;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.s3 {
+    width: 98%;
+    height: 98%;
+    background-color: yellow;
+    border-radius: 0 0 0 100%;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.s4 {
+    width: 98%;
+    height: 99%;
+    background-color: yellow;
+    border-radius: 0 0 100% 0;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.three {
+    background-color: darkgreen;
+    width: 25%;
+    height: 100%;
+}
+
+.a {
+    background-color: darkgreen;
+    width: 25%;
+    height: 100%;
+    transform: rotate(-30deg);
+    position: relative;
+    left: -30px;
+}
+
+.b {
+    background-color: darkgreen;
+    width: 25%;
+    height: 100%;
+    transform: rotate(30deg);
+    position: relative;
+    top: -80px;
+    left: 20px;
+}
