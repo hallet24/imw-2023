@@ -1,74 +1,34 @@
-console.log("connected");
-//let plant = {
-// "description": "Easy to take care of houseplant",
-// "photo": "rubberplant.jpg",
-// "name": "Rubber Plant",
+console.log('test');
 
-//$('body').append(`<p>${plant.name}`)
+// async function searchBooks() {
+//     try {
+//         const searchTerm = document.getElementById("searchInput").value;
+//         const response = await fetch(`https://api.lyrics.ovh/v1/[{artist}/{title}]${searchTerm}`);
 
+//         if (!response.ok) {
+//             throw new Error("Could not fetch resource");
+//         }
+//         const data = await application.json();
+//         const resultsDiv = document.getElementById("results");
+//         resultsDiv.innerHTML = '';
 
-//let plants = [
-// {
-//     "description": "Easy to take care of houseplant",
-//      "photo": "rubberplant.jpg",
-//      "name": "Rubber Plant",
-//   },
-//   {
-//       "description": "Easy to take care of houseplant",
-//       "photo": "rubberplant.jpg",
-//       "name": "Rubber Plant",
-//   },
-//   {
-//       "description": "Easy to take care of houseplant",
-//       "photo": "rubberplant.jpg",
-//       "name": "Rubber Plant",
-//   },
-//]
-
-//for (let i = 0; i < plants.length; i++) {
-//    $('body').append(`
-//    <div>
-//        <h2>${plant[i].description}</h2>
-//        <img 
-//        <p>${plant[i].name}</p>
-//    </div>;
-//    `)
-//}
-
-//fetch("plants.json")
-// .then(function (response) {
-//      return response.json();
-//   })
-//
-//   .then(function (data) {
-//       for (let i = 0; i < data.plants.length; i++) {
-//           $('body').append(`
-// <div>
-//       <h2>${data.plants[i].description}</h2>
-//        <img 
-//       <p>${data.plants[i].name}</p>
-//    </div>;
-//   `)
-//       }
-////    })
-
-///   .catch (function (error) {
-//    $(`body`).append('')
-//})
+//     }
+// }
 
 
-fetch("https://ghibliapi.vercel.app/species")
-    .then(function (response) {
-        return response.json();
-    })
+// const inputField = document.getElementById("button")
+
+fetch(`https://api.lyrics.ovh/v1/[{artist}/{title}]${searchTerm}`);
+    .then(function (application) {
+    return application.json();
+})
     .then(function (data) {
         console.log(data);
         data.forEach(dataPoint => {
             $(`body`).append(`
-            <div>
-            <h2>${dataPoint.name}</h2>
-            <p>${dataPoint.eye_colors}</p>
-            </div>`)
+        <div>
+        <h2>${dataPoint.chorus}</h2>
+        </div>`)
             console.log(dataPoint);
         })
     })
